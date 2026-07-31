@@ -1,0 +1,40 @@
+
+name: Dry Run changes
+on:
+  push:
+    branches:
+      - '*'
+      - '!main'
+env:
+  # Add new Microservices directories here - match to kustomize dir name
+  DIRECTORY_LIST:
+    "
+    app/crq_configs
+    "
+
+jobs:
+   # Based on the branch gather the environment to deploy to..
+  Identify-changes:
+    runs-on: ["self-hosted"]
+    name: test_flow
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+      - name: install requirements
+        run: |
+          pip3 install -r requirements.txt
+      - name: Apply service modified filter
+        uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          list-files: shell
+          base: ${{ github.ref_name }}
+          filters: |
+            crqs:
+              - add|modified : app/crq_configs/**
+
+      - name: Run nornir
+        run: |
+          changed_configs='${{steps.filter.outputs.crqs_files}}'
+          cd app
+          python3 configure_prod_devices.py --dry_run --list $changed_configs

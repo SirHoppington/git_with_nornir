@@ -1,0 +1,40 @@
+---
+mgmt:
+  ipv4-gw: 10.0.0.1
+  ipv4-subnet: 10.0.0.0/24
+  network: custom_mgmt_network
+name: ci
+topology:
+  kinds:
+    arista_ceos:
+      binds:
+        - interfaces.json:/mnt/flash/EosIntfMapping.json:ro
+      env:
+        INTFTYPE: Ethernet
+      exec:
+        - sleep 10
+        - FastCli -p 15 -c 'security pki key generate rsa 2048 eapi-key.key'
+        - FastCli -p 15 -c 'security pki certificate generate self-signed eapi-self-signed.crt key eapi-key.key validity 9000 parameters common-name r1-lab'
+        - "FastCli -p 15 -c 'conf t \n management api http-commands \n vrf OOB \n no shutdown'"
+      image: ceos:latest
+  links:
+    - endpoints:
+        - r1-lab:eth1
+        - r2-lab:eth1
+  nodes:
+    r1-lab:
+      image: ceos:4.31.2F
+      kind: arista_ceos
+      labels:
+        ansible-group: role_pe_router
+        type: lab
+      mgmt-ipv4: 10.0.0.100
+      # startup-config: startup-configs/r1-lab.cfg
+    r2-lab:
+      image: ceos:4.31.2F
+      kind: arista_ceos
+      labels:
+        ansible-group: role_pe_router
+        type: lab
+      mgmt-ipv4: 10.0.0.99
+      # startup-config: startup-configs/r2-lab.cfg

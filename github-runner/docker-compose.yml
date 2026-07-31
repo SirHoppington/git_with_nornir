@@ -1,0 +1,15 @@
+---
+# One-shot self-hosted runner:
+#   cp .env.example .env   # fill in ACCESS_TOKEN
+#   docker compose up -d --build
+#   docker compose logs -f      # expect "Listening for Jobs"
+#   docker compose down         # deregisters the runner (start.sh TERM trap)
+services:
+  runner:
+    build:
+      context: .
+    container_name: runner
+    env_file: .env
+    # host networking so the runner reaches both GitHub and the private cluster.
+    network_mode: host
+    restart: unless-stopped

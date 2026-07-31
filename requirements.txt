@@ -1,0 +1,10 @@
+requests==2.26.0
+nornir==3.3.0
+nornir-utils==0.2.0
+nornir-jinja2==0.2.0
+nornir-napalm==0.4.0
+nornir-salt==0.20.2
+ttp==0.9.5
+genie==23.9
+pyats==23.9
+tabulate==0.9.0
