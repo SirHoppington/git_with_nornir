@@ -10,6 +10,9 @@ ARG TARGETARCH
 RUN apt-get update -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         curl ca-certificates jq git sudo \
+        python3 \
+        python3-pip \
+        python3-venv \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m runner
 
