@@ -1,0 +1,13 @@
+# config.yaml..
+---
+inventory:
+       plugin: SimpleInventory
+       options:
+            # replace with clab/clab-<topology-name>/nornir-simple-inventory.yml
+            host_file: "inventory/hosts.yml"
+            group_file: "inventory/groups.yml"
+            defaults_file: "inventory/defaults.yml"
+runner:
+       plugin: threaded
+       options:
+            num_workers: 2
