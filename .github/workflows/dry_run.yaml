@@ -33,4 +33,5 @@ jobs:
       - name: Run nornir
         if: ${{ steps.filter.outputs.crqs == 'true' }}
         run: |
-          python3 configure_prod_devices.py --dry_run
+          cd nornir
+          python3 configure_devices.py --dry_run
