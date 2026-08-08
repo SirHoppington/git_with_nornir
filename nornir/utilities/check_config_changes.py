@@ -1,17 +1,36 @@
 import os
 import filecmp
 
-# Compare the files in the golden directory and the proposed CRQ dir
+
 def compare_changes(golden, proposed):
-    files = []
-    for file in os.listdir(f"{golden}/"):
-        files.append(file)
-    results = filecmp.cmpfiles(golden, proposed, files, shallow=True)
-    hostnames = [os.path.splitext(x)[0] for x in results[1]]
+    """Return hostnames where the golden and proposed configs differ."""
+    print("Golden:", os.listdir(golden))
+    print("Proposed:", os.listdir(proposed))
+
+    files = os.listdir(golden)
+
+    same, different, errors = filecmp.cmpfiles(
+        golden,
+        proposed,
+        files,
+        shallow=False,
+    )
+
+    hostnames = [
+        os.path.splitext(filename)[0]
+        for filename in different
+    ]
+
     return hostnames
 
+
 def main():
-    compare_changes()
+    golden = "golden"
+    proposed = "change-requests"
+
+    results = compare_changes(golden, proposed)
+
+    print(f"Changed hosts: {results}")
 
 if __name__ == "__main__":
     main()
