@@ -9,6 +9,7 @@ from nornir_utils.plugins.functions import print_result
 from utilities.check_config_changes import compare_changes
 
 new_config = "network-changes"
+backup_dir = "config-backups"
 
 # Create config parser to set dry_run when running script
 parser = argparse.ArgumentParser()
@@ -41,7 +42,7 @@ def deploy_network(task):
 
 
 def main():
-    crq_hosts = compare_changes()
+    crq_hosts = compare_changes(golden=backup_dir, proposed=new_config)
     filtered_hosts = FFun(nr, FL=crq_hosts)
     result = filtered_hosts.run(task=deploy_network)
     print_result(result)
