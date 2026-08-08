@@ -10,12 +10,12 @@ jobs:
     name: Apply to Prod
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: install requirements
         run: |
-          pip3 install -r requirements.txt
+          python3 -m pip install -r requirements.txt
       - name: Apply service modified filter
-        uses: dorny/paths-filter@v2
+        uses: dorny/paths-filter@v3
         id: filter
         with:
           list-files: shell
@@ -24,7 +24,7 @@ jobs:
             crqs:
               - add|modified : change_requests/**
       - name: Run nornir
-        if: ${{steps.filter.outputs.change_requests != '' }}
+        if: ${{steps.filter.outputs.crqs != '' }}
         run: |
           changed_configs='${{steps.filter.outputs.change_requests}}'
           python3 configure_devices.py --no_dry_run
