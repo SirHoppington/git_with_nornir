@@ -1,0 +1,43 @@
+name: Compare configurations
+on:
+  push:
+    branches: ["main"]
+  
+jobs:
+   # Based on the branch gather the environment to deploy to..
+  Identify-changes:
+    runs-on: ["self-hosted"]
+    name: Apply to Prod
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+      - name: install requirements
+        run: |
+          pip3 install -r requirements.txt
+      - name: Apply service modified filter
+        uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          list-files: shell
+          base: "main"
+          filters: |
+            crqs:
+              - add|modified : change_requests/**
+      - name: Run nornir
+        if: ${{steps.filter.outputs.change_requests != '' }}
+        run: |
+          changed_configs='${{steps.filter.outputs.change_requests}}'
+          python3 configure_devices.py --no_dry_run
+      - name: Push to Repo
+        run: |
+          git config --global user.name "Pipeline-BOT"
+          git config --global user.email "Pipe-BOT@github.com"
+          git config pull.rebase true
+          if [ -n "$(git status --porcelain)" ]; then
+            git add --all
+            git commit -am "feat: Update backups for ${{ github.sha }} [skip ci]"
+            git pull
+            git push
+          else
+            echo "No changes made";
+          fi

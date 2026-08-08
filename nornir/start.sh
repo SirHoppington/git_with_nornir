@@ -11,7 +11,7 @@ REG_TOKEN=$(curl -fsSX POST \
     "https://api.github.com/repos/${OWNER}/${REPO}/actions/runners/registration-token" \
     | jq -r .token)
 
-./config.sh --unattended --replace \
+/home/runner/config.sh --unattended --replace \
     --url "https://github.com/${OWNER}/${REPO}" \
     --token "${REG_TOKEN}" \
     --name "$(hostname)" \
@@ -25,4 +25,4 @@ cleanup() {
 trap 'cleanup; exit 130' INT
 trap 'cleanup; exit 143' TERM
 
-./run.sh & wait $!
+/home/runner/run.sh & wait $!

@@ -1,19 +1,13 @@
-
 name: Dry Run changes
 on:
-  push:
-    branches:
-      - '*'
-      - '!main'
-env:
-  # Add new Microservices directories here - match to kustomize dir name
-  DIRECTORY_LIST:
-    "
-    app/crq_configs
-    "
+  pull_request:
+    types: 
+      - opened
+      - synchronize
+      - reopened
+      - edited
 
 jobs:
-   # Based on the branch gather the environment to deploy to..
   Identify-changes:
     runs-on: ["self-hosted"]
     name: test_flow
@@ -28,13 +22,11 @@ jobs:
         id: filter
         with:
           list-files: shell
-          base: ${{ github.ref_name }}
+          base: "main"
           filters: |
             crqs:
-              - add|modified : app/crq_configs/**
+              - add|modified : change-requests/**
 
       - name: Run nornir
         run: |
-          changed_configs='${{steps.filter.outputs.crqs_files}}'
-          cd app
-          python3 configure_prod_devices.py --dry_run --list $changed_configs
+          python3 configure_prod_devices.py --dry_run

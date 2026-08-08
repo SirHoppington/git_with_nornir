@@ -1,0 +1,1447 @@
+2026-08-03 07:33:19,811 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 07:33:19,813 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 07:33:19,813 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:18:47,404 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:18:47,405 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:18:47,406 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:21:11,340 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:21:11,341 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:21:11,341 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:26:08,032 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:26:08,034 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:26:08,034 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:27:54,798 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:27:54,801 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:27:54,801 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:29:06,824 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:29:06,826 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:29:06,826 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:29:31,990 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:29:31,992 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:29:31,993 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 08:29:57,244 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:29:57,245 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "ceos". Is the library installed?
+
+2026-08-03 08:29:57,245 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "ceos". Is the library installed?
+
+2026-08-03 08:35:06,231 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 08:35:06,233 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "ceos". Is the library installed?
+
+2026-08-03 08:35:06,233 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "ceos". Is the library installed?
+
+2026-08-03 14:54:39,255 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 14:54:42,357 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 113] No route to host
+
+2026-08-03 14:54:42,358 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 113] No route to host
+
+2026-08-03 15:19:08,831 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 15:19:11,928 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 113] No route to host
+
+2026-08-03 15:19:11,929 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 113] No route to host
+
+2026-08-03 15:53:08,411 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 15:53:08,413 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 15:53:08,413 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 15:57:10,856 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 15:57:10,862 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2026-08-03 15:57:10,863 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2026-08-03 15:58:21,584 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 15:58:21,588 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2026-08-03 15:58:21,588 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 435, in send
+    self.transport.endheaders(message_body=data)
+  File "/usr/local/lib/python3.11/http/client.py", line 1318, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1078, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 1016, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/http/client.py", line 982, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 473, in send
+    raise ConnectionError(str(self), error_msg)
+pyeapi.eapilib.ConnectionError: Socket error during eAPI connection: [Errno 111] Connection refused
+
+2026-08-03 16:06:40,763 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2026-08-03 16:06:40,978 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 446, in send
+    raise ConnectionError(str(self),
+pyeapi.eapilib.ConnectionError: Unauthorized. Unable to authenticate user: Bad username/password combination
+
+2026-08-03 16:22:28,252 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 16:22:28,343 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 446, in send
+    raise ConnectionError(str(self),
+pyeapi.eapilib.ConnectionError: Unauthorized. Unable to authenticate user: Bad username/password combination
+
+2026-08-03 16:22:28,344 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 16:22:28,560 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'CRQ_DIR/ab.txt'
+
+2026-08-03 16:22:28,560 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 16:24:28,684 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 16:24:28,901 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 446, in send
+    raise ConnectionError(str(self),
+pyeapi.eapilib.ConnectionError: Unauthorized. Unable to authenticate user: Bad username/password combination
+
+2026-08-03 16:24:28,902 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 16:24:29,098 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'CRQ_DIR/ab.txt'
+
+2026-08-03 16:24:29,099 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 16:24:55,573 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 16:24:55,661 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 446, in send
+    raise ConnectionError(str(self),
+pyeapi.eapilib.ConnectionError: Unauthorized. Unable to authenticate user: Bad username/password combination
+
+2026-08-03 16:24:55,662 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 16:24:55,755 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'change-requests/ab.txt'
+
+2026-08-03 16:24:55,755 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 16:27:04,114 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 16:27:04,187 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 446, in send
+    raise ConnectionError(str(self),
+pyeapi.eapilib.ConnectionError: Unauthorized. Unable to authenticate user: Bad username/password combination
+
+2026-08-03 16:27:04,187 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 16:27:04,340 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'change-requests/ab.txt'
+
+2026-08-03 16:27:04,340 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 20:37:40,717 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 20:37:40,720 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 20:37:40,720 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 20:37:40,721 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 20:37:40,721 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 20:38:16,736 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 20:38:16,936 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 446, in send
+    raise ConnectionError(str(self),
+pyeapi.eapilib.ConnectionError: Unauthorized. Unable to authenticate user: Bad username/password combination
+
+2026-08-03 20:38:16,937 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 20:38:16,937 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 220, in open
+    sh_ver = self._run_commands(["show version"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 273, in _run_commands
+    return self.device.run_commands(commands, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/client.py", line 899, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 629, in execute
+    response = self.send(request)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyeapi/eapilib.py", line 446, in send
+    raise ConnectionError(str(self),
+pyeapi.eapilib.ConnectionError: Unauthorized. Unable to authenticate user: Bad username/password combination
+
+2026-08-03 20:38:16,938 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 20:53:50,209 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 20:53:50,212 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 20:53:50,212 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 31, in napalm_configure
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 476, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/inventory.py", line 528, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/napalm/base/__init__.py", line 173, in get_network_driver
+    raise ModuleImportError(f'Cannot import "{name}". Is the library installed?')
+napalm.base.exceptions.ModuleImportError: Cannot import "arista_ceos". Is the library installed?
+
+2026-08-03 20:53:50,212 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 20:53:50,213 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 20:54:16,969 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 20:54:20,000 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'change-requests/ab.txt'
+
+2026-08-03 20:54:20,001 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'change-requests/ab.txt'
+
+2026-08-03 20:54:20,002 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 20:54:20,003 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 20:56:29,461 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 20:56:29,744 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'change-requests/ab.txt'
+
+2026-08-03 20:56:29,745 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 20:56:29,745 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'Configuring r1-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'change-requests/ab.txt'
+
+2026-08-03 20:56:29,745 - nornir.core.task -    ERROR -      start() - Host 'r1-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 39, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r1-lab! (failed)
+
+
+2026-08-03 20:56:50,901 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 20:56:51,001 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'Configuring r2-lab!' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 469, in load_replace_candidate
+    self._load_config(filename, config, True)
+  File "/usr/local/lib/python3.11/site-packages/napalm/eos/eos.py", line 416, in _load_config
+    with open(filename, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'change-requests/r2-lab.txt'
+
+2026-08-03 20:56:51,003 - nornir.core.task -    ERROR -      start() - Host 'r2-lab': task 'deploy_network' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nick.hopgood/nornir_gh_runner/net-auto/configure_devices.py", line 38, in deploy_network
+    task.run(
+  File "/usr/local/lib/python3.11/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Configuring r2-lab! (failed)
+
+
+2026-08-03 21:02:23,122 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
+2026-08-03 21:02:49,353 -  nornir.core -     INFO -        run() - Running task 'deploy_network' with args {} on 2 hosts
