@@ -1,7 +1,8 @@
 name: Dry Run changes
+
 on:
   pull_request:
-    types: 
+    types:
       - opened
       - synchronize
       - reopened
@@ -9,18 +10,21 @@ on:
 
 permissions:
   contents: read
-  pull-requests: read
+  pull-requests: write
 
 jobs:
   Identify-changes:
-    runs-on: ["self-hosted"]
+    runs-on: self-hosted
     name: test_flow
+
     steps:
       - name: Checkout branch
         uses: actions/checkout@v4
-      - name: install requirements
+
+      - name: Install requirements
         run: |
-          pip3 install -r nornir/requirements.txt
+          python3 -m pip install -r nornir/requirements.txt
+
       - name: Apply service modified filter
         uses: dorny/paths-filter@v3
         id: filter
@@ -28,9 +32,33 @@ jobs:
           list-files: shell
           filters: |
             crqs:
-              - added|modified: nornir/change-requests/**
+              - added|modified|deleted: nornir/change-requests/**
+
+      - name: Comment changed CRQs
+        if: ${{ steps.filter.outputs.crqs == 'true' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const files = `${{ steps.filter.outputs.crqs_files }}`
+              .split('\n')
+              .filter(Boolean);
+
+            const body = [
+              '### CRQs detected',
+              '',
+              'The following configuration changes were detected:',
+              '',
+              ...files.map(file => `- \`${file}\``)
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+
       - name: Run nornir
         if: ${{ steps.filter.outputs.crqs == 'true' }}
         run: |
-          cd nornir
-          python3 configure_devices.py --dry_run
+          python3 nornir/configure_devices.py --dry_run
