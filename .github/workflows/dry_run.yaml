@@ -28,8 +28,7 @@ jobs:
           list-files: shell
           filters: |
             crqs:
-              - add|modified : nornir/change-requests/**
-
+              - added|modified: nornir/change-requests/**
       - name: Run nornir
         if: ${{ steps.filter.outputs.crqs == 'true' }}
         run: |
