@@ -26,8 +26,10 @@ services:
     container_name: nornir-runner
     network_mode: host
     restart: unless-stopped
+    working_dir: /usr/src/app/nornir
     env_file: nornir/.env
     volumes:
+      - ${PWD}/nornir:/usr/src/app/nornir:rw
       - /etc/hosts:/etc/hosts:ro
     depends_on:
       clab:
