@@ -4,6 +4,8 @@ FROM ubuntu:22.04
 
 ARG RUNNER_VERSION="2.336.0"
 ARG RUNNER_ARCH="arm64"
+# TARGETARCH is auto-provided by buildkit (amd64 / arm64) -> build native for the host.
+ARG TARGETARCH
 
 RUN apt-get update -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
