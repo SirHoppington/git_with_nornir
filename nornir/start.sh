@@ -15,7 +15,7 @@ REG_TOKEN=$(curl -fsSX POST \
     --url "https://github.com/${OWNER}/${REPO}" \
     --token "${REG_TOKEN}" \
     --name "$(hostname)" \
-    --labels self-hosted, clab \
+    --labels self-hosted \
     --ephemeral \
     --work _work
 
