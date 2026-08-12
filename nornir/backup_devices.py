@@ -17,7 +17,7 @@ def create_backups_dir(backup_dir):
 # Function to save configuration to a txt file with hostname
 def save_config_to_file(hostname, config):
     create_backups_dir(backup_dir)
-    filename = f"{hostname}.txt"
+    filename = f"{hostname}.cfg"
     with open(os.path.join(backup_dir, filename), "w") as f:
         f.write(config)
     print(f"Backed up {hostname} -> {os.path.join(backup_dir, filename)}")

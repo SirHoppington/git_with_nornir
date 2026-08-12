@@ -1,4 +1,0 @@
-interface Ethernet2
-   description to-r2-lab1
-   no switchport
-   ip address 10.100.0.1/30

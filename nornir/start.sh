@@ -16,6 +16,7 @@ REG_TOKEN=$(curl -fsSX POST \
     --token "${REG_TOKEN}" \
     --name "$(hostname)" \
     --labels self-hosted \
+    --ephemeral \
     --work _work
 
 cleanup() {
