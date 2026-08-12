@@ -32,7 +32,8 @@ jobs:
           FILES=$(git diff --name-only HEAD^ HEAD -- nornir/change-requests | tr '\n' ' ')
           echo "Change requests in this merge: ${FILES:-none}"
           echo "files=${FILES}" >> "$GITHUB_OUTPUT"
-
+      - name: Install requirements
+        run: python3 -m pip install -r nornir/requirements.txt
       - name: Deploy to the network
         if: steps.changed.outputs.files != ''
         working-directory: nornir
