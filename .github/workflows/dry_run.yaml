@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   dry-run:
-    runs-on: [self-hosted, clab]
+    runs-on: [ self-hosted ]
     name: Dry run change requests
 
     steps:
