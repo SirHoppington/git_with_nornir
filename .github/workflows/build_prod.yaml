@@ -1,48 +1,49 @@
-name: Compare configurations
+name: Deploy changes
 
 on:
   push:
-    branches: ["main"]
-  
+    branches: [main]
+    paths:
+      - 'nornir/change-requests/**'
+
 permissions:
   contents: read
-  pull-requests: read
+  pull-requests: write
+
+concurrency:
+  group: network-deploy
+  cancel-in-progress: false
 
 jobs:
-   # Based on the branch gather the environment to deploy to..
-  Identify-changes:
-    runs-on: ["self-hosted"]
-    name: Apply to Prod
+  deploy:
+    runs-on: [self-hosted, clab]
+    name: Deploy change requests
+    environment: production
+
     steps:
-      - name: Checkout branch
+      - name: Checkout main
         uses: actions/checkout@v4
-      - name: install requirements
-        run: |
-          python3 -m pip install -r requirements.txt
-      - name: Apply service modified filter
-        uses: dorny/paths-filter@v3
-        id: filter
         with:
-          list-files: shell
-          base: "main"
-          filters: |
-            crqs:
-              - add|modified : change_requests/**
-      - name: Run nornir
-        if: ${{steps.filter.outputs.crqs != '' }}
+          fetch-depth: 2
+
+      - name: Work out which devices changed
+        id: changed
         run: |
-          changed_configs='${{steps.filter.outputs.change_requests}}'
-          python3 configure_devices.py --no_dry_run
-      - name: Push to Repo
+          FILES=$(git diff --name-only HEAD^ HEAD -- nornir/change-requests | tr '\n' ' ')
+          echo "Change requests in this merge: ${FILES:-none}"
+          echo "files=${FILES}" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to the network
+        if: steps.changed.outputs.files != ''
+        working-directory: nornir
         run: |
-          git config --global user.name "Pipeline-BOT"
-          git config --global user.email "Pipe-BOT@github.com"
-          git config pull.rebase true
-          if [ -n "$(git status --porcelain)" ]; then
-            git add --all
-            git commit -am "feat: Update backups for ${{ github.sha }} [skip ci]"
-            git pull
-            git push
+          python3 configure_devices.py --no_dry_run --files "${{ steps.changed.outputs.files }}"
+
+      - name: Add applied diff to the job summary
+        if: always() && steps.changed.outputs.files != ''
+        run: |
+          if [ -f nornir/diff.md ]; then
+            cat nornir/diff.md >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "No changes made";
+            echo "### Deploy failed before reaching the devices" >> "$GITHUB_STEP_SUMMARY"
           fi

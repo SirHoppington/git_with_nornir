@@ -1,3 +1,4 @@
+
 import argparse
 from pathlib import Path
 
@@ -22,14 +23,7 @@ def parse_args():
     parser.set_defaults(dry=True)
 
     parser.add_argument(
-        "--files",
-        default="",
-        help="Space separated change request paths, as given by paths-filter",
-    )
-    parser.add_argument(
-        "--devices",
-        default="",
-        help="Comma separated hostnames, an alternative to --files",
+        "--files", default="", help="Space separated change request paths"
     )
 
     return parser.parse_args()
@@ -37,26 +31,24 @@ def parse_args():
 
 def changed_devices(args):
     """Work out which devices have a pending change request."""
-    if args.devices:
-        names = [d.strip() for d in args.devices.split(",") if d.strip()]
-    elif args.files:
+    if args.files:
         names = [Path(f).stem for f in args.files.split() if f.strip()]
     else:
         names = [path.stem for path in sorted(CHANGE_DIR.glob("*.cfg"))]
 
-    # dict.fromkeys de-duplicates while keeping the original order. The is_file()
-    # check drops any change request that was deleted in this PR - it will still
-    # show up in the diff, but there is nothing left to deploy.
-    return [name for name in dict.fromkeys(names) if (CHANGE_DIR / f"{name}.cfg").is_file()]
+    # dict.fromkeys de-duplicates while keeping the order. The is_file() check
+    # drops any change request deleted in this PR - it still shows up in the
+    # diff, but there's nothing left to deploy.
+    return [n for n in dict.fromkeys(names) if (CHANGE_DIR / f"{n}.cfg").is_file()]
 
 
 def select_hosts(nr, names):
-    """Filter the inventory down to the devices we actually have changes for."""
+    """Filter the inventory down to the devices we have changes for."""
     devices = nr.filter(filter_func=lambda host: host.name in set(names))
 
     missing = set(names) - set(devices.inventory.hosts)
     if missing:
-        raise SystemExit(f"Change requests found for hosts not in inventory: {sorted(missing)}")
+        raise SystemExit(f"Change requests for hosts not in inventory: {sorted(missing)}")
 
     return devices
 
@@ -80,11 +72,9 @@ def write_report(result, dry_run):
     lines = [f"### {heading}", ""]
 
     for host, multi_result in result.items():
-        lines.append(f"**{host}**")
-        lines.append("")
+        lines += [f"**{host}**", ""]
 
         if multi_result.failed:
-            # index 1 is the napalm_configure subtask, index 0 is deploy_network
             error = multi_result[1].exception if len(multi_result) > 1 else multi_result[0].exception
             lines += ["```", f"FAILED: {error}", "```", ""]
             continue
@@ -96,7 +86,6 @@ def write_report(result, dry_run):
             lines += ["_No changes - device already matches the requested config_", ""]
 
     REPORT_FILE.write_text("\n".join(lines))
-    print(f"Wrote report to {REPORT_FILE}")
 
 
 def main():
