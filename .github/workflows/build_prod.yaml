@@ -7,56 +7,49 @@ on:
       - 'nornir/change-requests/**'
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: write        # needed to clear the change requests after deploying
 
+# Queue deploys rather than cancelling them - two PRs merged together must not
+# hit the same devices at the same time.
 concurrency:
   group: network-deploy
   cancel-in-progress: false
 
 jobs:
   deploy:
-    runs-on: [ self-hosted ]
+    runs-on: [self-hosted]
     name: Deploy change requests
+    # Add required reviewers to this environment in the repo settings and the
+    # job waits for someone to approve it - a change window, as a button.
     environment: production
 
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
-      - name: Work out which devices changed
-        id: changed
-        run: |
-          FILES=$(git diff --name-only HEAD^ HEAD -- nornir/change-requests | tr '\n' ' ')
-          echo "Change requests in this merge: ${FILES:-none}"
-          echo "files=${FILES}" >> "$GITHUB_OUTPUT"
-      - name: Install requirements
-        run: python3 -m pip install -r nornir/requirements.txt
       - name: Deploy to the network
-        if: steps.changed.outputs.files != ''
         working-directory: nornir
-        run: |
-          python3 configure_devices.py --no_dry_run --files "${{ steps.changed.outputs.files }}"
+        run: python3 configure_devices.py --no_dry_run
 
       - name: Add applied diff to the job summary
-        if: always() && steps.changed.outputs.files != ''
+        if: always()
         run: |
           if [ -f nornir/diff.md ]; then
             cat nornir/diff.md >> "$GITHUB_STEP_SUMMARY"
           else
             echo "### Deploy failed before reaching the devices" >> "$GITHUB_STEP_SUMMARY"
           fi
-      
-      - name: Remove deployed change requests
-        if: success() && steps.changed.outputs.files != ''
-        env:
-          FILES: ${{ steps.changed.outputs.files }}
+
+      # The changes are on the devices now, so the requests have served their
+      # purpose. What was proposed, who approved it and what the device said all
+      # live in the pull request - an empty folder means nothing is pending.
+      - name: Clear deployed change requests
+        if: success()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm --quiet $FILES
+
+          git rm -q nornir/change-requests/*/*.cfg
           git commit -q -m "chore: deployed change requests [skip ci]"
-          git pull --rebase --quiet
-          git push --quiet
+          git pull --rebase -q
+          git push -q
