@@ -1,4 +1,3 @@
-
 name: Dry Run changes
 
 on:
@@ -16,28 +15,28 @@ concurrency:
 
 jobs:
   dry-run:
-    runs-on: [ self-hosted ]
+    runs-on: [self-hosted]
     name: Dry run change requests
 
     steps:
       - name: Checkout branch
         uses: actions/checkout@v4
 
-      - name: Find changed change requests
+      - name: Any pending change requests?
         uses: dorny/paths-filter@v3
         id: filter
         with:
-          list-files: shell
           filters: |
             crqs:
-              - added|modified|deleted: nornir/change-requests/**
+              - 'nornir/change-requests/**'
+
       - name: Install requirements
         run: python3 -m pip install -r nornir/requirements.txt
+        
       - name: Dry run against the network
         if: steps.filter.outputs.crqs == 'true'
         working-directory: nornir
-        run: |
-          python3 configure_devices.py --dry_run --files "${{ steps.filter.outputs.crqs_files }}"
+        run: python3 configure_devices.py --dry_run
 
       # always() so a failed dry run still reports back to the PR
       - name: Add diff to the job summary
@@ -58,7 +57,7 @@ jobs:
           BODY_FILE=nornir/diff.md
 
           if [ ! -f "$BODY_FILE" ]; then
-            printf '### Dry run failed before reaching the devices\n\nCheck the logs.\n' > "$BODY_FILE"
+            printf '### Dry run failed before reaching the devices\n\nCheck the workflow logs.\n' > "$BODY_FILE"
           fi
 
           # -R reads the file as raw text, -s slurps it into a single string,
