@@ -27,6 +27,9 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
 
+      - name: Install requirements
+        run: python3 -m pip install -r nornir/requirements.txt
+
       - name: Deploy to the network
         working-directory: nornir
         run: python3 configure_devices.py --no_dry_run

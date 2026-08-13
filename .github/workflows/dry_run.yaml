@@ -30,6 +30,9 @@ jobs:
             crqs:
               - 'nornir/change-requests/**'
 
+      - name: Install requirements
+        run: python3 -m pip install -r nornir/requirements.txt
+        
       - name: Dry run against the network
         if: steps.filter.outputs.crqs == 'true'
         working-directory: nornir
