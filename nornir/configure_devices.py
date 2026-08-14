@@ -62,19 +62,19 @@ def deploy_network(task, changes, dry_run):
 def write_report(result, dry_run):
     """Write the device generated diffs out as markdown for the PR comment."""
     heading = "Dry run - no changes applied" if dry_run else "Changes applied"
-    lines = [f"### {heading}", ""]
+    report = [f"### {heading}\n"]
 
     for device, multi_result in result.items():
-        lines += [f"**{device}**", ""]
-
         if multi_result.failed:
-            lines += ["```", f"FAILED: {multi_result[-1].exception}", "```", ""]
+            body = f"```\nFAILED: {multi_result[-1].exception}\n```"
         elif multi_result[1].diff:
-            lines += ["```diff", multi_result[1].diff, "```", ""]
+            body = f"```diff\n{multi_result[1].diff}\n```"
         else:
-            lines += ["_No changes - the device already matches this config_", ""]
+            body = "_No changes - the device already matches this config_"
 
-    REPORT_FILE.write_text("\n".join(lines))
+        report.append(f"**{device}**\n\n{body}\n")
+
+    REPORT_FILE.write_text("\n".join(report))
 
 
 def main():
@@ -94,8 +94,9 @@ def main():
     if unknown:
         raise SystemExit(f"Change requests for devices not in inventory: {unknown}")
 
-    devices = nr.filter(filter_func=lambda host: host.name in changes)
-
+    #devices = nr.filter(filter_func=lambda host: host.name in changes)
+    devices = nr.filter(name__in=changes)
+    
     print(f"{'Dry running' if args.dry else 'Deploying'} against: {', '.join(changes)}")
 
     result = devices.run(task=deploy_network, changes=changes, dry_run=args.dry)
