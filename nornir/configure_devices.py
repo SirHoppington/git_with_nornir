@@ -94,9 +94,8 @@ def main():
     if unknown:
         raise SystemExit(f"Change requests for devices not in inventory: {unknown}")
 
-    #devices = nr.filter(filter_func=lambda host: host.name in changes)
-    devices = nr.filter(name__in=changes)
-    
+    devices = nr.filter(filter_func=lambda host: host.name in changes)
+
     print(f"{'Dry running' if args.dry else 'Deploying'} against: {', '.join(changes)}")
 
     result = devices.run(task=deploy_network, changes=changes, dry_run=args.dry)
